@@ -52,7 +52,7 @@ with open('config.yaml') as file:
 
 
 #name, authentication_status, username = authenticator.login('Login', 'main')
-if authentication_status:
+#if authentication_status:
 
 
 
