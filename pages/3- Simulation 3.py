@@ -42,16 +42,16 @@ st.set_page_config(layout="wide", page_title="Ecosystem_Management_Simulation")
 with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
+#authenticator = stauth.Authenticate(
+#    config['credentials'],
+#    config['cookie']['name'],
+#    config['cookie']['key'],
+#    config['cookie']['expiry_days'],
+#    config['preauthorized']
+#)
 
-name, authentication_status, username = authenticator.login('Login', 'main')
-if authentication_status:
+#name, authentication_status, username = authenticator.login('Login', 'main')
+#if authentication_status:
     # creating a function to cache the read excel data
     @st.cache_data
     def load_file(path):
@@ -331,8 +331,8 @@ if authentication_status:
                     st.markdown('Please check your species and environmental conditions, then try again') 
                 
 
-elif authentication_status == False:
-    st.error('Username/password is incorrect')
+#elif authentication_status == False:
+#    st.error('Username/password is incorrect')
     # try:
     #     if authenticator.register_user('Register user', preauthorization=False):
     #         st.success('User registered successfully')
@@ -340,8 +340,8 @@ elif authentication_status == False:
     #             yaml.dump(config, file, default_flow_style=False)
     # except Exception as e:
     #     st.error(e)
-elif authentication_status == None:
-    st.warning('Please enter your username and password')
+#elif authentication_status == None:
+#    st.warning('Please enter your username and password')
 
     # remove the top padding
 st.markdown(
