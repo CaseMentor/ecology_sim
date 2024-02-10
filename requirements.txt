@@ -24,4 +24,4 @@ streamlit-modal
 tokenizers
 toml
 streamlit-extras
-
+libgl1-mesa-glx
