@@ -46,26 +46,26 @@ with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 # defining the login information
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
+#authenticator = stauth.Authenticate(
+#    config['credentials'],
+#    config['cookie']['name'],
+#    config['cookie']['key'],
+#    config['cookie']['expiry_days'],
+#    config['preauthorized']
+#)
 
 
 
 
 # login authentication
-name, authentication_status, username = authenticator.login('Login', 'main')
-if username == 'password_hasher':
-        unhashed_password = st.text_input('password')
-        hashed_passwords = stauth.Hasher([unhashed_password]).generate()
-        st.write(hashed_passwords)
-        authenticator.logout('Log Out','main')
+#name, authentication_status, username = authenticator.login('Login', 'main')
+#if username == 'password_hasher':
+#        unhashed_password = st.text_input('password')
+#        hashed_passwords = stauth.Hasher([unhashed_password]).generate()
+#        st.write(hashed_passwords)
+#        authenticator.logout('Log Out','main')
  
-elif authentication_status and username != 'password_hasher':
+#elif authentication_status and username != 'password_hasher':
     #styling the buttons
 
     # creating a function to cache the read excel data
@@ -341,11 +341,11 @@ elif authentication_status and username != 'password_hasher':
                 with no_sus.container():
                     st.markdown('Please check your species and environmental conditions, then try again') 
                 
-elif authentication_status == False:
-    st.error('Username/password is incorrect')
+#elif authentication_status == False:
+#    st.error('Username/password is incorrect')
 
-elif authentication_status == None:
-    st.warning('Please enter your username and password')
+#elif authentication_status == None:
+#    st.warning('Please enter your username and password')
 
 
 # hide the made with streamlit
