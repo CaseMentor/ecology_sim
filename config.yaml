@@ -20,6 +20,10 @@ credentials:
       email: password@gmail.com
       name: password_hasher
       password: $2b$12$/p3teKg7CxIG0I/6LM/T2ubUz5/F8H3sX9IItahR10qFdlcEmryj.
+    password_hasher:
+      email: repair@gmail.com
+      name: repair
+      password: $2b$12$IEOy8uoE3FvCDfzSqo9rauEjcvXtLf1G6NNdBc.bUIFHgfyjSzuS2
 preauthorized:
   emails:
   - mail@gmail.com
