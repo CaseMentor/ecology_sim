@@ -42,16 +42,16 @@ st.set_page_config(layout="wide", page_title="Ecosystem_Management_Simulation")
 with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
-#authenticator = stauth.Authenticate(
-#    config['credentials'],
-#    config['cookie']['name'],
-#    config['cookie']['key'],
-#    config['cookie']['expiry_days'],
-#    config['preauthorized']
-#)
+authenticator = stauth.Authenticate(
+   config['credentials'],
+   config['cookie']['name'],
+   config['cookie']['key'],
+   config['cookie']['expiry_days'],
+   config['preauthorized']
+)
 
-#name, authentication_status, username = authenticator.login('Login', 'main')
-#if authentication_status:
+name, authentication_status, username = authenticator.login('Login', 'main')
+if authentication_status:
     # creating a function to cache the read excel data
     @st.cache_data
     def load_file(path):
