@@ -58,14 +58,14 @@ with open('config.yaml') as file:
 
 
 # login authentication
-#name, authentication_status, username = authenticator.login('Login', 'main')
-#if username == 'password_hasher':
-#        unhashed_password = st.text_input('password')
-#        hashed_passwords = stauth.Hasher([unhashed_password]).generate()
-#        st.write(hashed_passwords)
-#        authenticator.logout('Log Out','main')
+name, authentication_status, username = authenticator.login('Login', 'main')
+if username == 'password_hasher':
+        unhashed_password = st.text_input('password')
+        hashed_passwords = stauth.Hasher([unhashed_password]).generate()
+        st.write(hashed_passwords)
+        authenticator.logout('Log Out','main')
  
-#elif authentication_status and username != 'password_hasher':
+elif authentication_status and username != 'password_hasher':
     #styling the buttons
 
     # creating a function to cache the read excel data
