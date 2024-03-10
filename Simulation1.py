@@ -324,11 +324,6 @@ elif authentication_status and username != 'password_hasher':
     success = Modal(key="Congrats! Key",title="Congrats!")
     with left:
         if submit:
-            
-            if 'sidebar_state' not in st.session_state:
-                st.session_state.sidebar_state = 'expanded'
-            st.session_state.sidebar_state = 'collapsed' if st.session_state.sidebar_state == 'expanded'
-            
             if parameters[0] == "--":
                 with incomplete.container():
                     st.markdown('Please make sure you have selected 8 species and the corresponding environmental conditions.')
