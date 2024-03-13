@@ -17,8 +17,6 @@ from streamlit_extras.switch_page_button import switch_page
 
 
 
-# defining the modal a component that is responsible for popup messages
-modal = Modal(key="Demo Key",title="Is the Ecosystem Sustainable?")
 
 # Comparing two lists to see if the values match even if not in order
 def check_if_equal(list_1, list_2):
@@ -167,9 +165,12 @@ elif authentication_status and username != 'password_hasher':
                 
     # define two columns to split the main container
     left, right = st.columns([3.5,1], gap='large')
-
+    
     #writing the headlins and instructions
     with left:
+        # defining the modal a component that is responsible for popup messages
+        modal = Modal(key="Demo Key",title="Is the Ecosystem Sustainable?")
+
         multipage_1, multipage_2, multipage_3 = st.columns(3)
         with multipage_1:
             page1 = st.button("Simulation 1", type = 'primary')
