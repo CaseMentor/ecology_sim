@@ -322,7 +322,7 @@ elif authentication_status and username != 'password_hasher':
     incomplete = Modal(key="incomplete Key",title="Your ecosystem is incomplete")
     no_sus = Modal(key="no_sus Key",title="Your ecosystem is NOT sustainable")
     success = Modal(key="Congrats! Key",title="Congrats!")
-    with left:
+    with right:
         if submit:
             if parameters[0] == "--":
                 with incomplete.container():
