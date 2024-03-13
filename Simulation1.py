@@ -317,12 +317,12 @@ elif authentication_status and username != 'password_hasher':
         temp = (float(parameters[1]) >= optimal_temp[0])  & (float(parameters[1]) <= optimal_temp[1])
         wind = (float(parameters[2]) >= optimal_wind[0])  & (float(parameters[2]) <= optimal_wind[1])
         ph = (float(parameters[3]) >= optimal_ph[0])  & (float(parameters[3]) <= optimal_ph[1])
-
-    # the final test, checking the species and conditions, four diffrent answers using a pop up message 
-    incomplete = Modal(key="incomplete Key",title="Your ecosystem is incomplete")
-    no_sus = Modal(key="no_sus Key",title="Your ecosystem is NOT sustainable")
-    success = Modal(key="Congrats! Key",title="Congrats!")
-    with right:
+    with left:
+        # the final test, checking the species and conditions, four diffrent answers using a pop up message 
+        incomplete = Modal(key="incomplete Key",title="Your ecosystem is incomplete")
+        no_sus = Modal(key="no_sus Key",title="Your ecosystem is NOT sustainable")
+        success = Modal(key="Congrats! Key",title="Congrats!")
+    with left:
         if submit:
             if parameters[0] == "--":
                 with incomplete.container():
